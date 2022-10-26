@@ -1,0 +1,9 @@
+function esPosterior(f1, f2 : TFecha) : boolean;
+var
+	val1, val2 : integer;
+begin
+	val1 := f1.dia + f1.mes * 31 + (f1.anio - 2000) * 372;
+	val2 := f2.dia + f2.mes * 31 + (f2.anio - 2000) * 372;
+	
+	esPosterior := (val1 > val2);
+end;
